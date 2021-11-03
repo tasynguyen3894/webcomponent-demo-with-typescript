@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 import "./ArticleCard";
 import "./Search";
 import { Article } from "../models/Article";
-import { ArticleService } from '../services/ArticleService';
+import { ArticleServiceInterface, ArticleService } from '../services/ArticleServiceInterface';
 
 @customElement("page-articles")
 class Articles extends LitElement {
@@ -12,7 +12,7 @@ class Articles extends LitElement {
     articles: Article[] = [];
     
     @property()
-    articleService: ArticleService;
+    articleService: ArticleServiceInterface;
 
     constructor() {
         super();
