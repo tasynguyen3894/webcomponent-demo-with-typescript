@@ -3,7 +3,8 @@ import { customElement, property } from "lit/decorators.js";
 import "./ArticleCard";
 import "./Search";
 import { Article } from "../models/Article";
-import { ArticleServiceInterface, ArticleService } from '../services/ArticleServiceInterface';
+import { ArticleServiceInterface } from '../services/ArticleServiceInterface';
+import { ArticleService } from "../services/ArticleService";
 
 @customElement("page-articles")
 class Articles extends LitElement {
