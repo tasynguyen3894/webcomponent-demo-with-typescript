@@ -11,6 +11,7 @@ class Footer extends LitElement {
         return css`
             footer {
                 text-align: center;
+                margin-top: 20px;
             }
 
             footer .website-name {

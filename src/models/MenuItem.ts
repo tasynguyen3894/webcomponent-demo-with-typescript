@@ -4,10 +4,12 @@ import { MenuItemInterface } from "./interfaces/MenuItemInterface";
 export class MenuItem implements MenuItemInterface {
     title: string;
     link: string;
+    isHome: boolean;
 
-    constructor(title: string = '', link: string = '') {
+    constructor(title: string = '', link: string = '', isHome: boolean = false) {
         this.title = title;
         this.link = link;
+        this.isHome = isHome;
     }
 
     renderLink(): TemplateResult {

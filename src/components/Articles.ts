@@ -32,6 +32,11 @@ class Articles extends LitElement {
 
     searchEventHandle(e: CustomEvent) {
         this.articles = this.getArticle(e.detail.keyword);
+        this.dispatchEvent(new CustomEvent('onSearch', {
+            detail: {
+                keyword: e.detail.keyword
+            }
+        }));
     }
 
     getArticle(keyword: string = ''): Article[] {
